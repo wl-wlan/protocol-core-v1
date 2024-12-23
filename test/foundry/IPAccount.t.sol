@@ -306,6 +306,7 @@ contract IPAccountTest is BaseTest {
             abi.encodeWithSignature("executeSuccessfully(string)", "test"),
             0
         );
+
         assertEq("test", abi.decode(result, (string)));
 
         assertEq(ipAccount.state(), expectedState);
